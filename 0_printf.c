@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * _printf - write output to stdout, the standard output stream
@@ -22,7 +21,7 @@ int _printf(const char *format, ...)
 		{
 			if (*format != '%')
 				count += write(1, format, 1);
-			else if (*format == '%' && *(format - 1) == '-')
+			else if (*format == '%' && *(format - 1) == 92)
 				count += _putchar('%');
 			else
 			{format++;
