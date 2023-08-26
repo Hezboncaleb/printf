@@ -27,6 +27,9 @@ int _printf(const char *format, ...)
 			{format++;
 				switch (*format)
 				{
+					case ('b'):
+						count += print_binary(va_arg(list, unsigned int));
+						break;
 					case ('c'):
 						count += _putchar(va_arg(list, int));
 						break;
@@ -36,9 +39,6 @@ int _printf(const char *format, ...)
 						break;
 					case ('u'):
 						count += print_unsignedint((long int) va_arg(list, int));
-						break;
-					case ('f'):
-						va_arg(list, double);
 						break;
 					case ('s'):
 						count += print_string((char *) va_arg(list, char *));
