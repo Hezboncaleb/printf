@@ -43,6 +43,9 @@ int _printf(const char *format, ...)
 					case ('s'):
 						count += print_string((char *) va_arg(list, char *));
 						break;
+					case ('S'):
+						count += print_String((char *) va_arg(list, char *));
+						break;
 					case ('X'):
 					case ('o'):
 					case ('p'):

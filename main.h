@@ -9,6 +9,7 @@ int print_unsignedint(int n);
 int _printf(const char *format, ...);
 int _strlen(const char *str);
 int print_string(char *str);
+int print_String(char *str);
 int print_float(float n);
 int print_binary(unsigned long int n);
 #endif

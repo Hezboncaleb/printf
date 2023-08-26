@@ -65,3 +65,29 @@ int print_unsignedint(int n)
 
 	return (count);
 }
+
+/**
+ * print_String - prints string in output
+ * @str: string
+ * Return: count
+ */
+
+int print_String(char *str)
+{
+	int count = 0, i = 0;
+
+	while (str[i] != '\0')
+	{
+		if (str[i] < 32 || str[i] >= 127)
+		{
+			count += _putchar('\\');
+			count += _putchar('x');
+			count += _putchar('0');
+			count += _putchar('A');
+		}
+		else
+			count += _putchar(str[i]);
+		i++;
+	}
+	return (count);
+}
